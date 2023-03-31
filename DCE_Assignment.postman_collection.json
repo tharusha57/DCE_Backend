@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "60b26351-6655-4bf0-b223-c2f6f27b879d",
+		"name": "DCE_Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19974169"
+	},
+	"item": [
+		{
+			"name": "Get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test_user\",\r\n    \"email\" : \"test@gmail.com\",\r\n    \"firstname\" : \"first_test\",\r\n    \"lastname\" : \"last_test\",\r\n    \"isActive\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/createcustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"createcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test_user_updated\",\r\n    \"email\" : \"test@gmail.com\",\r\n    \"firstname\" : \"first_test\",\r\n    \"lastname\" : \"last_test\",\r\n    \"isActive\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/updatecustomer/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"updatecustomer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test_user_updated\",\r\n    \"email\" : \"test@gmail.com\",\r\n    \"firstname\" : \"first_test\",\r\n    \"lastname\" : \"last_test\",\r\n    \"isActive\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/deletecustomer/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"deletecustomer",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test_user_updated\",\r\n    \"email\" : \"test@gmail.com\",\r\n    \"firstname\" : \"first_test\",\r\n    \"lastname\" : \"last_test\",\r\n    \"isActive\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/activeorder/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"activeorder",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
